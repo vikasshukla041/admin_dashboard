@@ -1,0 +1,30 @@
+.second-row {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-row: 1/2;
+
+    .second-row-wave-graph-wrapper {
+
+
+        .wave-graph {
+            position: relative;
+
+            .graph-tooltip {
+                padding: 10px;
+                width: 15em;
+                height: 10em;
+                background-color: white;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1em;
+                position: absolute;
+                box-sizing: border-box;
+                left: 40%;
+                z-index: 99;
+                box-shadow: 2px 2px 20px grey;
+
+            }
+        }
+    }
+
+}

@@ -1,0 +1,114 @@
+@include variable;
+
+header {
+    .container-fluid {
+        padding-left: 0 !important;
+    }
+
+    .navbar {
+        height: 4em;
+        background-color: #3259e4;
+        padding: 0;
+        margin: 0;
+
+        a {
+            margin: 0;
+
+        }
+
+        .compnay-profile-wrapper {
+            width: 72%;
+            justify-content: space-between;
+
+            form {
+                input[type="search"]::placeholder {
+                    text-align: left;
+                    padding-left: 2em;
+                    position: relative;
+                    color: white;
+                }
+            }
+
+            .company-name {
+                font-size: 2rem;
+                margin-bottom: 0;
+                color: white;
+            }
+
+            .search-text-type {
+                .search {
+                    padding: 5px;
+                    border: 1px solid white;
+                    background-color: #3259e4;
+                    border-radius: 20px;
+                    position: relative;
+
+                }
+
+                .search-icon {
+                    position: absolute;
+                    right: 34%;
+                    bottom: 45%;
+                }
+            }
+        }
+
+        .profile-connecting-section {
+            display: flex;
+
+            .alert-profile-alert-section {
+                border-right: 1px solid white;
+                border-left: 1px solid white;
+                height: 4em;
+                padding: 1em;
+                width: 5em;
+                text-align: center;
+
+                .mail-icon {
+                    position: relative;
+                }
+            }
+
+            .notification-profile-alert-section {
+                border-right: 1px solid white;
+                height: 4em;
+                padding: 1em;
+                width: 5em;
+                text-align: center;
+            }
+
+            .profile-name-wrapper {
+                width: 10%;
+
+                li {
+                    list-style-type: none;
+
+                    a {
+                        color: white;
+                    }
+                }
+
+                .profile-photo {
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                    background-color: white;
+
+                }
+            }
+        }
+
+        .hamburger-icon {
+            border-right: 1px solid white;
+            height: 4em;
+            padding: 1em;
+            width: 4em;
+            text-align: center;
+        }
+
+
+
+    }
+
+
+}

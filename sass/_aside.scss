@@ -1,0 +1,35 @@
+.column {
+    max-width: 20%;
+    height: 100%;
+}
+
+.aside-section-wrapper {
+    padding: 2em;
+    background: white;
+    margin-top: 10px;
+    height: 100%;
+
+    ul {
+        padding-top: 1em;
+
+        li {
+            list-style-type: none;
+            padding: 1em 0;
+
+            img {
+                padding: 0.3em;
+                margin-right: 1em;
+                border-radius: 7px;
+            }
+
+        }
+
+        .active {
+            color: #3259e4;
+
+            img {
+                background: orangered;
+            }
+        }
+    }
+}
