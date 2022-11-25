@@ -4,27 +4,73 @@
     grid-row: 1/2;
 
     .second-row-wave-graph-wrapper {
-
+        border-radius: 10px;
 
         .wave-graph {
             position: relative;
 
             .graph-tooltip {
                 padding: 10px;
-                width: 15em;
-                height: 10em;
                 background-color: white;
                 display: grid;
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
                 gap: 1em;
                 position: absolute;
                 box-sizing: border-box;
-                left: 40%;
+                left: 43%;
+                top: -15%;
                 z-index: 99;
-                box-shadow: 2px 2px 20px grey;
+                box-shadow: 2px 2px 20px #dddcdc;
+                border-radius: 2%;
+
+                .tooltip-info {
+                    font-weight: 900;
+                }
+
+                small {
+                    color: #b3b5c4;
+                    font-size: 0.8em;
+                }
+
+                .red {
+                    color: #ed675c;
+                }
+
+                .purple {
+                    color: #ab65fa;
+                }
+
+                .blue {
+                    color: #29c6b0;
+                }
+
+                .bottom-arrow {
+                    width: 0;
+                    height: 0;
+                    border-left: 15px solid transparent;
+                    border-right: 15px solid transparent;
+                    border-top: 15px solid white;
+                    position: absolute;
+                    bottom: -7%;
+                    left: 45%;
+                    z-index: 99;
+                }
 
             }
         }
+
+        .second-row-wave-graph-content {
+            .years {
+                color: #b3b5c4;
+            }
+
+            .yearly-dropdown {
+                border: 1px solid #b3b5c4;
+                padding: 0.3em 1em;
+                border-radius: 3px;
+            }
+        }
+
     }
 
 }

@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Ultra&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
@@ -34,8 +37,7 @@
                 <div class="compnay-profile-wrapper d-flex">
                     <p class="company-name">Queenley</p>
                     <form class="search-text-type">
-                        <input class=" form-control search" type="search" placeholder="Search" aria-label="Search">
-                        <img src="./images/Search.png" class="search-icon" />
+                        <input class=" form-control search" type="search" placeholder="Search" aria-label="Search" />
                     </form>
                 </div>
                 <div class="profile-connecting-section">
@@ -100,7 +102,7 @@
                                     <li class="total">$124,500</li>
                                 </ul>
                                 <ul class="d-flex align-items-center">
-                                    <li class="profite-percent text-success"><small>&#8595;05.24%</small></li>
+                                    <li class="profit-percent text-success"><small>&#8595; 05.24%</small></li>
                                 </ul>
                             </div>
                         </div>
@@ -112,7 +114,7 @@
                                     <li class="total">21.64%</li>
                                 </ul>
                                 <ul class="d-flex align-items-center">
-                                    <li class="profite-percent text-danger"><small>&#8593;02.86%</small></li>
+                                    <li class="profit-percent text-danger"><small>&#8593; 02.86%</small></li>
                                 </ul>
                             </div>
                         </div>
@@ -124,33 +126,36 @@
                                     <li class="total">$27,584</li>
                                 </ul>
                                 <ul class="d-flex align-items-center">
-                                    <li class="profite-percent text-success"><small>&#8595;00.87%</small></li>
+                                    <li class="profit-percent text-success"><small><b>&#8595;</b> 00.87%</small></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="production-this-year-graph bg-white">
-                        <section class="production-this-year bg-white">
+                        <section class="production-this-year bg-white" style="height: 8em;">
                             <ul class="m-0">
-                                <li class="d-flex justify-content-between">PRODUCTION THIS YEAR <span
-                                        class="text-success">&#8593;23.56%</span></li>
+                                <li class="d-flex justify-content-between heading">PRODUCTION THIS YEAR <span
+                                        class="text-success">&#8593; 23.56%</span></li>
                                 <li class="profite-percent">$23,768</li>
                             </ul>
-                            <canvas id="production_this_year_myChart" width="50" height="8"></canvas>
+                            <canvas id="production_this_year_myChart" height="8" width="50"></canvas>
                         </section>
                     </div>
 
                 </div>
             </section>
+
+
+
             <!-- Second Row Center Start -->
             <section class="second-row bg-white mt-3">
                 <div class="second-row-wave-graph-wrapper">
                     <div class="second-row-wave-graph-content p-4">
                         <div class="second-row-graph-content-heading d-flex justify-content-between">
                             <p class="sub-heading">Performance of Propery vs Market Average</p>
-                            <form action="/action_page.php">
-                                <label for="cars text-muted">Sort By :</label>
-                                <select name="cars" id="cars">
+                            <form action="/action_page.php" class="years">
+                                <label for="years text-muted" class="pr-2">Sort By : </label>
+                                <select name="years" id="years" class="years yearly-dropdown">
                                     <option value="Yearly text-muted">Yearly</option>
                                 </select>
                             </form>
@@ -160,26 +165,29 @@
                         <div class="graph-tooltip">
                             <div class="revenue">
                                 <small>Revenue</small>
-                                <p>$1524.00</p>
+                                <p class="tooltip-info red">$ 1524.00</p>
                             </div>
                             <div class="Market Average">
                                 <small>Revenue</small>
-                                <p>$1524.00</p>
+                                <p class="tooltip-info purple">$ 1524.00</p>
                             </div>
                             <div class="Market Average">
                                 <small>Task Completed</small>
-                                <p>$1524.00</p>
+                                <p class="tooltip-info blue">28</p>
                             </div>
                             <div class="Market Average">
                                 <small>Task Created</small>
-                                <p>$1524.00</p>
+                                <p class="tooltip-info blue">28</p>
                             </div>
+                            <span class="bottom-arrow"></span>
                         </div>
                         <canvas id="buyers" width="70" height="20"></canvas>
                     </div>
                 </div>
             </section>
             <!-- Second Row Center End -->
+
+
             <section class="third-row mt-3">
                 <section class="activities bg-white">
                     <div class="activities-heading">

@@ -16,6 +16,7 @@
             border: none;
             padding: 10px;
             border-radius: 5px;
+            font-size: 0.9em;
         }
 
         .overview-heading {
@@ -38,12 +39,17 @@
 
         .profile-overview-wrapper {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            border-radius: 10px;
 
             .profile-overview-content {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
+                .profit-percent {
+                    font-weight: 600;
+                }
             }
 
         }
@@ -60,6 +66,7 @@
 
             .heading {
                 font-weight: 600;
+                font-size: 0.9em;
             }
 
             .span-right {
@@ -68,24 +75,36 @@
 
             ul {
                 padding-left: 1em;
-
-                // .total {
-                //     padding-top: 10px;
-                // }
             }
 
             .total {
                 font-size: 1.8em;
+                font-weight: 600;
             }
         }
 
         .span-right {
             border-right: none;
         }
+
+        .production-this-year-graph {
+            border-radius: 10px;
+
+            .production-this-year {
+                padding: 20px 20px 0px 20px;
+
+                .heading {
+                    font-size: 0.9em;
+                    font-weight: 600;
+                }
+            }
+
+
+
+            ul {
+                padding-left: 0;
+            }
+        }
     }
 
-    // .second-row {
-    //     display: grid;
-    //     grid-template-columns: 3fr 1fr;
-    // }
 }

@@ -2,7 +2,7 @@ var data = {
     labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
     datasets: [{
         backgroundColor: "#5625da",
-        data: [45, 20, 35, 61, 10, 120, 15, 10, 20, 25, 50, 25, 12],
+        data: [45, 40, 65, 91, 50, 150, 55, 40, 30, 45, 50, 25, 12],
     }]
 };
 
@@ -11,6 +11,8 @@ var production_this_year_myChart = new Chart(ctx, {
     type: 'bar',
     data: data,
     options: {
+        maintainAspectRatio: true,
+        responsive: true,
         legend: {
             display: false
         },
@@ -60,10 +62,7 @@ var production_this_year_myChart = new Chart(ctx, {
 var market_Average = document.getElementById("buyers").getContext("2d");
 
 var buyers = new Chart(market_Average, {
-    // The type of chart we want to create
-    type: "line", // also try bar or other graph types
-
-    // The data for our dataset
+    type: "line",
     data: {
         labels: [
             "Jan",
@@ -86,14 +85,14 @@ var buyers = new Chart(market_Average, {
                 backgroundColor: "lightblue",
                 borderColor: "royalblue",
                 data: [
-                    66.4,
-                    62.8,
-                    60.8,
-                    70.4,
-                    68.6,
-                    55.2,
-                    75.4,
-                    70.8,
+                    26.4,
+                    18.8,
+                    20.8,
+                    52.4,
+                    50.6,
+                    25.2,
+                    30.4,
+                    40.8,
                     65.1,
                     70.8,
                     71.1,
@@ -107,6 +106,8 @@ var buyers = new Chart(market_Average, {
 
     // Configuration options
     options: {
+        maintainAspectRatio: true,
+        responsive: true,
         legend: {
             display: false
         },
@@ -121,7 +122,8 @@ var buyers = new Chart(market_Average, {
                 },
                 ticks: {
                     maxTicksLimit: 5,
-                    beginAtZero: true
+                    beginAtZero: true,
+
                 },
 
             }
@@ -155,6 +157,8 @@ var production_this_year_myChart = new Chart(ctx, {
     type: 'doughnut',
     data: data,
     options: {
+        responsive: true,
+        maintainAspectRatio: false,
         legend: {
             display: false,
             label: 'My dataset',
