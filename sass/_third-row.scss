@@ -1,7 +1,7 @@
 .third-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1em;
+    .world-map {
+        max-width: 100%;
+    }
 
     .activities {
         padding: 2em;
@@ -17,7 +17,7 @@
 
         .activity-list {
             display: flex;
-            padding: 0.5em 0;
+            padding: 0.8em 0;
 
             .activity-image {
                 width: 40px;
@@ -31,6 +31,7 @@
 
                 p {
                     margin: 0;
+                    font-size: 0.9em;
                 }
             }
         }
@@ -40,19 +41,26 @@
         padding: 2em;
 
         .global-sales-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            padding-top: 2em;
+
+            img {
+                width: 0.8em;
+                height: 0.8em;
+            }
 
             p {
                 font-size: 0.8em;
+                margin-bottom: 0;
 
                 img {
                     padding-right: 10px;
                 }
             }
 
-            .user {
-                padding-left: 2em;
+            .global-sale-list {
+                display: flex;
+                align-items: center;
+                padding-bottom: 1em;
             }
         }
     }
@@ -61,8 +69,40 @@
         padding: 2em;
 
         .donut-chart {
-            width: 100%;
-            height: 100%;
+            width: 80%;
+            height: 80%;
+            margin: auto;
         }
     }
+}
+
+// Equal Height Column Bootstrap
+
+.row.equal-cols {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.row.equal-cols:before,
+.row.equal-cols:after {
+    display: block;
+}
+
+.row.equal-cols>[class*='col-'] {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.row.equal-cols>[class*='col-']>* {
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
 }

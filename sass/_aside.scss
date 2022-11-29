@@ -1,20 +1,23 @@
 .column {
-    max-width: 20%;
-    height: 100%;
+    height: inherit;
+    background: white;
 }
 
 .aside-section-wrapper {
     padding: 2em;
     background: white;
     margin-top: 10px;
-    height: 100%;
 
     ul {
         padding-top: 1em;
 
         li {
             list-style-type: none;
-            padding: 1em 0;
+            padding: 2em 0;
+            font-size: 0.7em;
+            font-weight: 600;
+            color: #b5b8c8;
+            cursor: pointer;
 
             img {
                 padding: 0.3em;

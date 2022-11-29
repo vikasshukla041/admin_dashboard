@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Ultra&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Ultra&display=swap" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
@@ -21,6 +21,7 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0-rc"></script>
     <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script> -->
 
     <link rel="stylesheet" href="./css/main.css" />
@@ -28,245 +29,325 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <div class="hamburger-icon">
-                    <a class="navbar-brand" href="#"><img src="./images/Menu icon.png" class="hambuger pl-2" /></a>
-                </div>
-                <div class="compnay-profile-wrapper d-flex">
-                    <p class="company-name">Queenley</p>
-                    <form class="search-text-type">
-                        <input class=" form-control search" type="search" placeholder="Search" aria-label="Search" />
-                    </form>
-                </div>
-                <div class="profile-connecting-section">
-                    <div class="alert-profile-alert-section">
-                        <a class="navbar-brand" href="#"> <img src="./images/mail.png" class="mail-icon" />
-                        </a>
+    <div class="body-container">
+        <header>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <div class="hamburger-icon">
+                        <a class="navbar-brand" href="#"><img src="./images/Menu icon.png" class="hambuger pl-2" /></a>
                     </div>
-                    <div class="notification-profile-alert-section">
-                        <a class="navbar-brand" href="#"> <img src="./images/notofication.png"
-                                class="notification-icon" />
-                        </a>
+                    <div class="compnay-profile-wrapper d-flex">
+                        <p class="company-name">Queenley</p>
+                        <form class="search-text-type">
+                            <input class=" form-control search" type="search" placeholder="Search"
+                                aria-label="Search" />
+                        </form>
                     </div>
-                    <div class="profile-name-wrapper d-flex">
-                        <ul class="d-flex justify-content-center align-items-center m-0">
-                            <li class="profile-photo"></li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Hermann P Schnital
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </nav>
-    </header>
-    <!-- header close -->
-
-    <!-- Main Section Start -->
-    <section class="main-wrapper row d-flex">
-        <div class="column">
-            <!-- Aside Section Wrapper Start -->
-            <section class="aside-section-wrapper">
-                <p>DASHBOARD</p>
-                <ul>
-                    <li class="active"><img src="./images/dashboard.png" />Dashboard</li>
-                    <li><img src="./images/Projects.png" />Projects</li>
-                    <li><img src="./images/marketing.png" />Marketing</li>
-                    <li><img src="./images/tsbles.png" />Tables</li>
-                    <li><img src="./images/analytics.png" />Analytics</li>
-                    <li><img src="./images/settings.png" />Setting</li>
-                </ul>
-            </section>
-            <!-- Aside Section Wrapper End -->
-        </div>
-        <!-- Middle Content Overview Section Start -->
-        <div class="column-two">
-            <section class="middle-content-wrapper">
-                <div class="middle-content-overview-heading d-flex justify-content-between align-items-center">
-                    <p class="m-0 overview-heading">Overview</p>
-                    <input type="button" value="Find New Flat" class="overview-btn" />
-                </div>
-                <div class="overview-content">
-                    <div class="profile-overview-wrapper bg-white">
-                        <div class="profile-overview-content">
-                            <img src="./images/Icon-1.png" />
-                            <div class="market-size-content">
-                                <ul class=" m-0">
-                                    <li class="heading">MARKET SIZE</li>
-                                    <li class="total">$124,500</li>
-                                </ul>
-                                <ul class="d-flex align-items-center">
-                                    <li class="profit-percent text-success"><small>&#8595; 05.24%</small></li>
-                                </ul>
-                            </div>
+                    <div class="profile-connecting-section">
+                        <div class="alert-profile-alert-section">
+                            <a class="navbar-brand" href="#"> <img src="./images/mail.png" class="mail-icon" />
+                            </a>
                         </div>
-                        <div class=" profile-overview-content">
-                            <img src="./images/Layer 777-1.png" />
-                            <div class="market-size-content">
-                                <ul>
-                                    <li class="heading">ENGAGEMENT RATE</li>
-                                    <li class="total">21.64%</li>
-                                </ul>
-                                <ul class="d-flex align-items-center">
-                                    <li class="profit-percent text-danger"><small>&#8593; 02.86%</small></li>
-                                </ul>
-                            </div>
+                        <div class="notification-profile-alert-section">
+                            <a class="navbar-brand" href="#"> <img src="./images/notofication.png"
+                                    class="notification-icon" />
+                            </a>
                         </div>
-                        <div class="profile-overview-content">
-                            <img src="./images/Icon.png" />
-                            <div class="market-size-content span-right">
-                                <ul>
-                                    <li class="heading">TOTAL SALES</li>
-                                    <li class="total">$27,584</li>
-                                </ul>
-                                <ul class="d-flex align-items-center">
-                                    <li class="profit-percent text-success"><small><b>&#8595;</b> 00.87%</small></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="production-this-year-graph bg-white">
-                        <section class="production-this-year bg-white" style="height: 8em;">
-                            <ul class="m-0">
-                                <li class="d-flex justify-content-between heading">PRODUCTION THIS YEAR <span
-                                        class="text-success">&#8593; 23.56%</span></li>
-                                <li class="profite-percent">$23,768</li>
+                        <div class="profile-name-wrapper d-flex">
+                            <ul class="d-flex justify-content-center align-items-center m-0">
+                                <li class="profile-photo"></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Hermann P Schnital
+                                    </a>
+                                </li>
                             </ul>
-                            <canvas id="production_this_year_myChart" height="8" width="50"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- header close -->
+
+        <!-- Main Section Start -->
+        <section class="main-wrapper row g-0">
+            <div class="column col-md-2 col-lg-2">
+                <!-- Aside Section Wrapper Start -->
+                <section class="aside-section-wrapper">
+                    <p>DASHBOARD</p>
+                    <ul>
+                        <li class="active"><img src="./images/dashboard.png" />Dashboard</li>
+                        <li><img src="./images/Projects.png" />Projects</li>
+                        <li><img src="./images/marketing.png" />Marketing</li>
+                        <li><img src="./images/tsbles.png" />Tables</li>
+                        <li><img src="./images/analytics.png" />Analytics</li>
+                        <li><img src="./images/settings.png" />Setting</li>
+                    </ul>
+                </section>
+                <!-- Aside Section Wrapper End -->
+            </div>
+            <!-- Middle Content Overview Section Start -->
+            <div class="column-two col-md-10 col-lg-10">
+                <section class="middle-content-wrapper">
+                    <div class="row g-0">
+                        <div
+                            class="middle-content-overview-heading d-flex justify-content-between align-items-center col-md-9 col-lg-9">
+                            <p class="m-0 overview-heading">Overview</p>
+                            <input type="button" value="Find New Flat" class="overview-btn" />
+                        </div>
+                    </div>
+                    <div class="overview-content">
+                        <div class="profile-overview-wrapper col-md-12 col-lg-12">
+                            <div class="row g-0">
+                                <div class="col-md-3 bg-white grid-wrapper">
+                                    <div class="profile-overview-content ">
+                                        <div class="profile-overview-image">
+                                            <img src="./images/Icon-1.png" />
+                                        </div>
+                                        <div class="market-size-content">
+                                            <ul class=" m-0">
+                                                <li class="heading">MARKET SIZE</li>
+                                                <li class="total">$124,500</li>
+                                            </ul>
+                                            <ul class="d-flex align-items-center">
+                                                <li class="profit-percent text-success"><small>&#8595; 05.24%</small>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-lg-3 bg-white grid-wrapper">
+                                    <div class=" profile-overview-content span-class">
+                                        <div class="profile-overview-image">
+                                            <img src="./images/Layer 777-1.png" />
+                                        </div>
+                                        <div class="market-size-content">
+                                            <ul>
+                                                <li class="heading">ENGAGEMENT RATE</li>
+                                                <li class="total">21.64%</li>
+                                            </ul>
+                                            <ul class="d-flex align-items-center">
+                                                <li class="profit-percent text-danger"><small>&#8593; 02.86%</small>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-lg-3 bg-white grid-wrapper">
+                                    <div class="profile-overview-content ">
+                                        <div class="profile-overview-image">
+                                            <img src="./images/Icon.png" />
+                                        </div>
+                                        <div class="market-size-content span-right">
+                                            <ul>
+                                                <li class="heading">TOTAL SALES</li>
+                                                <li class="total">$27,584</li>
+                                            </ul>
+                                            <ul class="d-flex align-items-center">
+                                                <li class="profit-percent text-success"><small><b>&#8595;</b>
+                                                        00.87%</small>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="production-this-year-graph col-md-3 col-lg-3">
+                                    <section class="production-this-year bg-white" style="height: 8em;">
+                                        <ul class="m-0">
+                                            <li class=" d-flex justify-content-between heading">
+                                                PRODUCTION
+                                                THIS YEAR
+                                                <span class="text-success">&#8593; 23.56%</span>
+                                            </li>
+                                            <li class="profite-percent"><b>$25,32,240</b></li>
+                                        </ul>
+                                        <canvas id="production_this_year_myChart" height="8" width="50"></canvas>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <!-- Second Row Center Start -->
+                <section class="second-row mt-3 row g-0">
+                    <div class="second-row-wave-graph-wrapper col-md-9 col-lg-9 bg-white">
+                        <div class="second-row-wave-graph-content p-4 col-md-12 col-lg-12">
+                            <div class="second-row-graph-content-heading d-flex justify-content-between">
+                                <p class="sub-heading">Performance of Propery vs Market Average</p>
+                                <form action="/action_page.php" class="years">
+                                    <label for="years text-muted" class="pr-2">Sort By : </label>
+                                    <select name="years" id="years" class="years yearly-dropdown">
+                                        <option value="Yearly text-muted">Yearly</option>
+                                    </select>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="wave-graph">
+                            <div class="graph-tooltip">
+                                <div class="revenue">
+                                    <small>Revenue</small>
+                                    <p class="tooltip-info red">$ 1524.00</p>
+                                </div>
+                                <div class="Market Average">
+                                    <small>Revenue</small>
+                                    <p class="tooltip-info purple">$ 1524.00</p>
+                                </div>
+                                <div class="Market Average">
+                                    <small>Task Completed</small>
+                                    <p class="tooltip-info blue">28</p>
+                                </div>
+                                <div class="Market Average">
+                                    <small>Task Created</small>
+                                    <p class="tooltip-info blue">28</p>
+                                </div>
+                                <span class="bottom-arrow"></span>
+                            </div>
+                            <canvas id="buyers" width="70" height="16"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 second-row-graph-wrapper">
+                        <div class="commission-year-wrapper ">
+                            <div class="col-md-12 col-lg-12 commission-this-year-chart bg-white">
+                                <div class="commission-this-year-content">
+                                    <ul class="m-0 pl-0">
+                                        <li class="d-flex justify-content-between heading"><b>COMMISSION THIS YEAR</b>
+                                            <span class="text-success"><b>&#8593; 23.56%</b></span>
+                                        </li>
+                                        <li class="profite-percent"><b>$4,82,045</b></li>
+                                    </ul>
+                                </div>
+                                <canvas id="commission-this-year" height="15" width="40"></canvas>
+                            </div>
+                        </div>
+                        <div class="monthly-visit-wrapper">
+                            <div class="col-md-12 col-lg-12 monthly-visit-chart bg-white">
+                                <div class="monthly-visit-chart-content">
+                                    <ul class="m-0">
+                                        <li class="d-flex justify-content-between heading"><b>MONTHLY VISITS</b>
+                                            <span class="text-success"><b>&#8593; 38.27% </b></span>
+                                        </li>
+                                        <li class="profite-percent d-flex justify-content-between">
+                                            <b>74,84,840</b><span class="text-danger span-class"><b>09.84%</b></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <canvas id="monthly-visit" height="15" width="50"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Second Row Center End -->
+
+
+                <section class="third-row mt-3 row equal-cols">
+                    <div class="activities-section-wrapper col-md-4">
+                        <section class="activities bg-white ">
+                            <div class="activities-heading">
+                                <p class="sub-heading">Activity</p>
+                                <p class="text-primary"><a href="#"><small><b>View All</b></small></a></p>
+                            </div>
+                            <div class="activity-list">
+                                <div class="activity-image"></div>
+                                <div class="activity-content">
+                                    <p class="sub-heading">Caspian Bellevedere made an offer for $1,40,000</p>
+                                    <small class="text-muted">12 Min ago, Bellevedere, New York</small>
+                                </div>
+                            </div>
+                            <div class="activity-list">
+                                <div class="activity-image"></div>
+                                <div class="activity-content">
+                                    <p class="sub-heading">Valentino Morose asking for the rented</p>
+                                    <small class="text-muted">18 Min ago, Owosso, USA</small>
+                                </div>
+                            </div>
+                            <div class="activity-list">
+                                <div class="activity-image"></div>
+                                <div class="activity-content">
+                                    <p class="sub-heading">Most Disclosure.PDF</p>
+                                    <small class="text-muted">18 Min ago, Owosso, USA</small>
+                                </div>
+                            </div>
+                            <div class="activity-list">
+                                <div class="activity-image"></div>
+                                <div class="activity-content">
+                                    <p class="sub-heading">Valentino Morose asking for the rented</p>
+                                    <small class="text-muted">15 Min ago, Bellevedere, UAE</small>
+                                </div>
+                            </div>
+                            <div class="activity-list">
+                                <div class="activity-image"></div>
+                                <div class="activity-content">
+                                    <p class="sub-heading">Piff Jenkins 02 New Party Availables</p>
+                                    <small class="text-muted">15 Min ago, Bellevedere, UAE</small>
+                                </div>
+                            </div>
                         </section>
                     </div>
+                    <!-- Activities End -->
 
-                </div>
-            </section>
-
-
-
-            <!-- Second Row Center Start -->
-            <section class="second-row bg-white mt-3">
-                <div class="second-row-wave-graph-wrapper">
-                    <div class="second-row-wave-graph-content p-4">
-                        <div class="second-row-graph-content-heading d-flex justify-content-between">
-                            <p class="sub-heading">Performance of Propery vs Market Average</p>
-                            <form action="/action_page.php" class="years">
-                                <label for="years text-muted" class="pr-2">Sort By : </label>
-                                <select name="years" id="years" class="years yearly-dropdown">
-                                    <option value="Yearly text-muted">Yearly</option>
-                                </select>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="wave-graph">
-                        <div class="graph-tooltip">
-                            <div class="revenue">
-                                <small>Revenue</small>
-                                <p class="tooltip-info red">$ 1524.00</p>
+                    <!-- pie chart start -->
+                    <section class="doughnut-graph-main-wrapper col-md-4 col-lg-4">
+                        <section class="doughnut-chart-section bg-white">
+                            <p class="sub-heading">Top Five Email Senders</p>
+                            <div class="donut-chart">
+                                <canvas id="doughnut-chart" width="10" height="10"></canvas>
                             </div>
-                            <div class="Market Average">
-                                <small>Revenue</small>
-                                <p class="tooltip-info purple">$ 1524.00</p>
-                            </div>
-                            <div class="Market Average">
-                                <small>Task Completed</small>
-                                <p class="tooltip-info blue">28</p>
-                            </div>
-                            <div class="Market Average">
-                                <small>Task Created</small>
-                                <p class="tooltip-info blue">28</p>
-                            </div>
-                            <span class="bottom-arrow"></span>
-                        </div>
-                        <canvas id="buyers" width="70" height="20"></canvas>
-                    </div>
-                </div>
-            </section>
-            <!-- Second Row Center End -->
+                        </section>
+                    </section>
+                    <!-- pie chart end -->
 
+                    <!-- global-sales start -->
+                    <section class="global-sales-section-wrapper col-md-4 col-lg-4">
+                        <section class="global-sales bg-white ">
+                            <p class="sub-heading">Global Sales Top Location</p>
+                            <img src="./images/png-world-map-world-map-png-2638.png" class="world-map" />
+                            <div class="global-sales-content row">
+                                <div class="first-grid col-md-6 col-lg-6 col-sm-12">
+                                    <div class="global-sale-list">
+                                        <img src="./images/Layer 777.png" />
+                                        <p class="red">Australia <span class="user">25042
+                                                User</span></p>
+                                    </div>
+                                    <div class="global-sale-list">
+                                        <img src="./images/Layer 780.png" />
+                                        <p>India <span class="user">25042 User</span></p>
+                                    </div>
+                                    <div class="global-sale-list">
+                                        <img src="./images/Layer 783.png" />
+                                        <p>Brazil<span class="user">25042 User</span></p>
+                                    </div>
 
-            <section class="third-row mt-3">
-                <section class="activities bg-white">
-                    <div class="activities-heading">
-                        <p class="sub-heading">Activity</p>
-                        <p class="text-primary"><a href="#">View All</a></p>
-                    </div>
-                    <div class="activity-list">
-                        <div class="activity-image"></div>
-                        <div class="activity-content">
-                            <p class="sub-heading">kjcasnsjckcwsajiesakjncwaskdnwjska</p>
-                            <small>12 Min ago, New York</small>
-                        </div>
-                    </div>
-                    <div class="activity-list">
-                        <div class="activity-image"></div>
-                        <div class="activity-content">
-                            <p class="sub-heading">kjcasnsjckcwsajiesakjncwaskdnwjska</p>
-                            <small>12 Min ago, New York</small>
-                        </div>
-                    </div>
-                    <div class="activity-list">
-                        <div class="activity-image"></div>
-                        <div class="activity-content">
-                            <p class="sub-heading">kjcasnsjckcwsajiesakjncwaskdnwjska</p>
-                            <small>12 Min ago, New York</small>
-                        </div>
-                    </div>
-                    <div class="activity-list">
-                        <div class="activity-image"></div>
-                        <div class="activity-content">
-                            <p class="sub-heading">kjcasnsjckcwsajiesakjncwaskdnwjska</p>
-                            <small class="text-muted">12 Min ago, New York</small>
-                        </div>
-                    </div>
-                    <div class="activity-list">
-                        <div class="activity-image"></div>
-                        <div class="activity-content">
-                            <p class="sub-heading">kjcasnsjckcwsajiesakjncwaskdnwjska</p>
-                            <small>12 Min ago, New York</small>
-                        </div>
-                    </div>
+                                </div>
+                                <div class="second-grid col-md-6 col-lg-6 col-sm-12">
+                                    <div class="global-sale-list">
+                                        <img src="./images/Layer 776.png" />
+                                        <p>China <span class="user">25042 User</span></p>
+                                    </div>
+                                    <div class="global-sale-list">
+                                        <img src="./images/Layer 775.png" />
+                                        <p>France <span class="user">25042 User</span></p>
+                                    </div>
+                                    <div class="global-sale-list">
+                                        <img src="./images/Layer 774.png" />
+                                        <p>New York <span class="user">25042 User</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                    <!-- global-sales end -->
                 </section>
-                <!-- Activities End -->
+                <section class="row"></section>
+            </div>
+            <!--Middle Content Overview Section End  -->
+        </section>
+    </div>
 
-                <!-- pie chart start -->
-                <section class="doughnut-chart-section bg-white">
-                    <p class="sub-heading">Top 5 Email Senders</p>
-                    <div class="donut-chart">
-                        <canvas id="doughnut-chart" width="15" height="15"></canvas>
-                    </div>
-                </section>
-                <!-- pie chart end -->
-
-                <!-- global-sales start -->
-                <section class="global-sales bg-white">
-                    <p class="sub-heading">Global Sales Top Location</p>
-                    <img src="./images/png-world-map-world-map-png-2638.png" />
-                    <div class="global-sales-content">
-                        <div class="first-grid">
-                            <p><img src="./images/Layer 777.png" />Australia <span class="user">25042
-                                    User</span></p>
-                            <p><img src="./images/Layer 780.png" />India <span class="user">25042 User</span></p>
-                            <p><img src="./images/Layer 783.png" />Brazil<span class="user">25042 User</span></p>
-                        </div>
-                        <div class="second-grid">
-                            <p><img src="./images/Layer 776.png" />China <span class="user">25042 User</span></p>
-                            <p><img src="./images/Layer 775.png" />France <span class="user">25042 User</span></p>
-                            <p><img src="./images/Layer 774.png" />New York <span class="user">25042 User</span></p>
-                        </div>
-                    </div>
-                </section>
-                <!-- global-sales end -->
-            </section>
-        </div>
-
-        <!--Middle Content Overview Section End  -->
-    </section>
     <!-- script -->
-
     <script src="./main.js"></script>
 </body>
 
