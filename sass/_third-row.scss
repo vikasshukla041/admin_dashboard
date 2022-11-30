@@ -1,7 +1,4 @@
 .third-row {
-    .world-map {
-        max-width: 100%;
-    }
 
     .activities {
         padding: 2em;
@@ -43,6 +40,7 @@
         .global-sales-content {
             padding-top: 2em;
 
+
             img {
                 width: 0.8em;
                 height: 0.8em;
@@ -61,6 +59,95 @@
                 display: flex;
                 align-items: center;
                 padding-bottom: 1em;
+                justify-content: space-between;
+
+
+                .color {
+                    font-size: 0.7em;
+                    font-weight: 600;
+                }
+
+                .user {
+                    font-weight: 600;
+                }
+
+                .red {
+                    color: #ff1c5a;
+                }
+
+                .blue {
+                    color: #6087f9;
+                }
+
+                .pink {
+                    color: #f760fa;
+                }
+
+                .green {
+                    color: #78d277;
+                }
+
+                .yellow {
+                    color: #fc8827;
+                }
+
+                .navy-blue {
+                    color: #5b44f4;
+                }
+            }
+        }
+
+        .global-sales-image-wrapper {
+            width: 100%;
+            position: relative;
+
+            .world-map {
+                max-width: 100%;
+            }
+
+            .image-on-image {
+                .navy-blue-image {
+                    left: 20%;
+                    top: 32%;
+                    position: absolute;
+                }
+
+                .red-image {
+                    bottom: 25%;
+                    right: 14%;
+                    position: absolute;
+                }
+
+                .green-image {
+                    top: 20%;
+                    right: 19%;
+                    position: absolute;
+                }
+
+                .pink-image {
+                    left: 30%;
+                    bottom: 31%;
+                    position: absolute;
+                }
+
+                .yellow-image {
+                    left: 45%;
+                    top: 30%;
+                    position: absolute;
+                }
+
+                .green-image {
+                    top: 20%;
+                    right: 20%;
+                    position: absolute;
+                }
+
+                .blue-image {
+                    top: 41%;
+                    right: 31%;
+                    position: absolute;
+                }
+
             }
         }
     }
@@ -74,6 +161,7 @@
             margin: auto;
         }
     }
+
 }
 
 // Equal Height Column Bootstrap

@@ -21,8 +21,13 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0-rc"></script>
-    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script> -->
+
+    <!-- <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script> -->
+    <!-- <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.6/chartjs-plugin-datalabels.min.js"
+        integrity="sha512-Tfw6etYMUhL4RTki37niav99C6OHwMDB2iBT5S5piyHO+ltK2YX8Hjy9TXxhE1Gm/TmAV0uaykSpnHKFIAif/A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <!-- <script src="chartjs-plugin-doughnutlabel.min.js"></script> -->
 
     <link rel="stylesheet" href="./css/main.css" />
     <title>Admin Dashboard</title>
@@ -215,7 +220,7 @@
                                 <div class="commission-this-year-content">
                                     <ul class="m-0 pl-0">
                                         <li class="d-flex justify-content-between heading"><b>COMMISSION THIS YEAR</b>
-                                            <span class="text-success"><b>&#8593; 23.56%</b></span>
+                                            <span class="text-success"><b>&#8593; 12.58%</b></span>
                                         </li>
                                         <li class="profite-percent"><b>$4,82,045</b></li>
                                     </ul>
@@ -231,7 +236,8 @@
                                             <span class="text-success"><b>&#8593; 38.27% </b></span>
                                         </li>
                                         <li class="profite-percent d-flex justify-content-between">
-                                            <b>74,84,840</b><span class="text-danger span-class"><b>09.84%</b></span>
+                                            <b>74,84,840</b><span class="text-danger span-class"><b>&#8593;
+                                                    09.84%</b></span>
                                         </li>
                                     </ul>
                                 </div>
@@ -304,36 +310,68 @@
                     <section class="global-sales-section-wrapper col-md-4 col-lg-4">
                         <section class="global-sales bg-white ">
                             <p class="sub-heading">Global Sales Top Location</p>
-                            <img src="./images/png-world-map-world-map-png-2638.png" class="world-map" />
+                            <div class="global-sales-image-wrapper">
+                                <img src="./images/png-world-map-world-map-png-2638.png" class="world-map" />
+                                <div class="image-on-image">
+                                    <img src="./images/Location (1).png" class="red-image img" />
+                                    <img src="./images/Location (2).png" class="navy-blue-image img" />
+                                    <img src="./images/Location (3).png" class="green-image img" />
+                                    <img src="./images/Location (4).png" class="pink-image img" />
+                                    <img src="./images/Location (5).png" class="yellow-image img" />
+                                    <img src="./images/Location (6).png" class="blue-image img" />
+                                </div>
+                            </div>
                             <div class="global-sales-content row">
-                                <div class="first-grid col-md-6 col-lg-6 col-sm-12">
+                                <div class="first-grid col-md-6 col-lg-6 col-sm-12 gx-5">
                                     <div class="global-sale-list">
-                                        <img src="./images/Layer 777.png" />
-                                        <p class="red">Australia <span class="user">25042
+                                        <div class="country-name">
+                                            <img src="./images/Layer 777.png" />
+                                            <span class="red color">Australia</span>
+                                        </div>
+                                        <p><span class="user">25042
                                                 User</span></p>
                                     </div>
                                     <div class="global-sale-list">
-                                        <img src="./images/Layer 780.png" />
-                                        <p>India <span class="user">25042 User</span></p>
+                                        <div class="country-name">
+                                            <img src="./images/Layer 780.png" />
+                                            <span class="blue color">India</span>
+                                        </div>
+                                        <p><span class="user">25042 User</span></p>
                                     </div>
                                     <div class="global-sale-list">
-                                        <img src="./images/Layer 783.png" />
-                                        <p>Brazil<span class="user">25042 User</span></p>
+                                        <div class="country-name">
+                                            <img src="./images/Layer 783.png" />
+                                            <span class="pink color">Brazil</span>
+                                        </div>
+                                        <p><span class="user"> 25042 User</span></p>
                                     </div>
 
                                 </div>
-                                <div class="second-grid col-md-6 col-lg-6 col-sm-12">
+                                <div class="second-grid col-md-6 col-lg-6 col-sm-12 gx-5">
                                     <div class="global-sale-list">
-                                        <img src="./images/Layer 776.png" />
-                                        <p>China <span class="user">25042 User</span></p>
+                                        <div class="country-name">
+                                            <img src="./images/Layer 776.png" />
+                                            <span class="green color">China </span>
+                                        </div>
+
+                                        <p><span class="user"> 25042 User</span></p>
                                     </div>
                                     <div class="global-sale-list">
-                                        <img src="./images/Layer 775.png" />
-                                        <p>France <span class="user">25042 User</span></p>
+                                        <div class="country-name">
+                                            <img src="./images/Layer 775.png" />
+                                            <span class="yellow color">France</span>
+                                        </div>
+
+                                        <p><span class="user"> 25042 User</span></p>
                                     </div>
                                     <div class="global-sale-list">
-                                        <img src="./images/Layer 774.png" />
-                                        <p>New York <span class="user">25042 User</span></p>
+                                        <div class="country-name">
+                                            <img src="./images/Layer 774.png" />
+                                            <span class="navy-blue color">New York </span>
+                                        </div>
+
+                                        <p><span class="user"> 25042 User</span>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -341,7 +379,8 @@
                     </section>
                     <!-- global-sales end -->
                 </section>
-                <section class="row"></section>
+                <section class="row">
+                </section>
             </div>
             <!--Middle Content Overview Section End  -->
         </section>

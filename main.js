@@ -49,6 +49,7 @@ var buyers = new Chart(market_Average, {
     type: "line",
     data: {
         labels: [
+            "",
             "Jan",
             "Feb",
             "Mar",
@@ -60,7 +61,8 @@ var buyers = new Chart(market_Average, {
             "Sep",
             "Oct",
             "Nov",
-            "Dec"
+            "Dec",
+            ""
         ],
         // Information about the dataset
         datasets: [
@@ -69,6 +71,7 @@ var buyers = new Chart(market_Average, {
                 backgroundColor: "lightblue",
                 borderColor: "royalblue",
                 data: [
+                    null,
                     26.4,
                     18.8,
                     20.8,
@@ -80,12 +83,34 @@ var buyers = new Chart(market_Average, {
                     65.1,
                     70.8,
                     71.1,
-                    80
-
+                    80,
+                    null
                 ]
             }
         ]
     },
+    plugins: [{
+        afterUpdate: function (chart, options) {
+            //..
+            var dataset = chart.config.data.datasets[0];
+
+            // Get the number of objects in the dataset array.
+            var noDataPoints = datasetArray.length;
+
+            //alert(noDataPoints); // testing only, you'll notice that this 
+            // alert would fire each time the responsive chart is resized.
+            var xOffset = (chart.width / noDataPoints) / 2;
+
+            for (var i = 0; i < dataset.data.length; i++) {
+                for (var key in dataset._meta) {
+                    var model = dataset._meta[key].data[i]._model;
+                    model.x += xOffset;
+                    model.controlPointNextX += xOffset;
+                    model.controlPointPreviousX += xOffset;
+                }
+            }
+        }
+    }],
 
 
     // Configuration options
@@ -96,9 +121,10 @@ var buyers = new Chart(market_Average, {
             display: false
         },
         layout: {
-            padding: 10
+            padding: 10,
         },
         scales: {
+            padding: 100,
             yAxes: [{
                 scaleLabel: {
                     display: true,
@@ -119,23 +145,53 @@ var buyers = new Chart(market_Average, {
 
             }
             ],
-            xAxes: [
-                {
-                    scaleLabel: {
-                        display: false
-                    },
-                    gridLines: {
-                        display: false,
-                        drawBorder: false,
-                    }
-                }
-            ]
+            xAxes: [{
+                scaleLabel: {
+                    display: false,
+                    offset: true,
+                    // labelOffset: 10,
+                },
+                gridLines: {
+                    display: false,
+                    drawBorder: true,
+                    // offsetGridLines: true,
+                },
+
+            }]
         }
     }
 });
 
 
 // Doughnut Graph
+
+
+
+// const counter = {
+//     id: 'counter',
+//     beforeDraw(chart, args, option) {
+//         const { ctxy, chartArea: { top, right, bottom, left, width, height } } = chart;
+//         ctxy.save();
+//         ctxy.fillStyle = 'blue';
+//         ctxy.fillRect(width / 2, top + (height / 2), 10, 10)
+//         ctxy.font = '200px sans-serif';
+//         ctxy.textAlign = 'center';
+//         ctxy.textStyle = 'blue';
+//         ctxy.fillText('97%', width / 2, top + (height / 2));
+//     }
+// };
+// var thickness = {
+//     id: "thickness",
+//     beforeDraw: function (chart, options) {
+//         let thickness = chart.options.plugins.thickness.thickness;
+//         thickness.forEach((item, index) => {
+//             chart.getDatasetMeta(0).data[index]._view.innerRadius = item[0];
+//             chart.getDatasetMeta(0).data[index]._view.outerRadius = item[1];
+//         });
+//     }
+// };
+
+
 var data = {
     labels: ["1", "2", "3", "4", "5"],
     datasets: [{
@@ -146,19 +202,6 @@ var data = {
     }]
 };
 
-const counter = {
-    id: 'counter',
-    beforeDraw(chart, args, option) {
-        const { ctxy, chartArea: { top, right, bottom, left, width, height } } = chart;
-        ctxy.save();
-        ctxy.fillStyle = 'blue';
-        ctxy.fillRect(width / 2, top + (height / 2), 10, 10)
-        ctxy.font = '200px sans-serif';
-        ctxy.textAlign = 'center';
-        ctxy.textStyle = 'blue';
-        ctxy.fillText('97%', width / 2, top + (height / 2));
-    }
-};
 
 var ctxy = document.getElementById("doughnut-chart");
 var production_this_year_myChart = new Chart(ctxy, {
@@ -169,16 +212,23 @@ var production_this_year_myChart = new Chart(ctxy, {
         maintainAspectRatio: true,
         cutoutPercentage: 50,
         plugins: {
-            dataLabels: {
+            datalabels: {
                 display: true,
-            }
+                align: 'bottom',
+                backgroundColor: '#ccc',
+                borderRadius: 3,
+                font: {
+                    size: 18,
+                },
+            },
+
         },
-        plugins: [counter],
         legend: {
             display: false,
             label: 'My dataset',
         },
     },
+
 });
 
 
@@ -190,12 +240,12 @@ new Chart(document.getElementById("commission-this-year"), {
     data: {
         labels: [10, 20, 30, 40, 45, 60, 70, 80, 90, 100],
         datasets: [{
-            data: [30, 20, 60, 20, 55, 40, 50, 60, 45, 80],
+            data: [30, 20, 60, 30, 20, 30, 40, 20, 45, 80],
             label: "Africa",
             borderColor: "#395ae6",
             fill: false
         }, {
-            data: [50, 40, 55, 35, 50, 40, 30, 65, 55, 80],
+            data: [50, 40, 55, 45, 60, 50, 60, 45, 55, 80],
             label: "Asia",
             borderColor: "#fdc53f",
             fill: false
@@ -229,7 +279,7 @@ new Chart(document.getElementById("commission-this-year"), {
                     display: false
                 }
             }]
-        }
+        },
     }
 });
 
@@ -290,4 +340,7 @@ new Chart(document.getElementById("monthly-visit"), {
 
 
 
+
+
+// new chart
 
