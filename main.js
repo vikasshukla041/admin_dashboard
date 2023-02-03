@@ -6,6 +6,7 @@ var data = {
     }]
 };
 
+
 var ctx = document.getElementById("production_this_year_myChart");
 var production_this_year_myChart = new Chart(ctx, {
     type: 'bar',
